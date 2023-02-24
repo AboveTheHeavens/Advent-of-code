@@ -8,9 +8,9 @@ def __get_file_data(filepath: str) -> list[str]:
 def get_demo_data():
     path = os.path.abspath(os.path.dirname(sys.argv[0]))
     filepath = os.path.join(path,'demo-input.txt')
-    return __get_file_data(filepath)
+    return [x.strip() for x in __get_file_data(filepath)]
 
 def get_input_data():
     path = os.path.abspath(os.path.dirname(sys.argv[0]))
     filepath = os.path.join(path,'input.txt')
-    return __get_file_data(filepath)
+    return [x.strip() for x in __get_file_data(filepath)]
